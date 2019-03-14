@@ -22,12 +22,22 @@ React-based Google Books Search app.React components, work with helper/util func
 
 ### Dependencies
 ---
+Client side
 ```js
 {
 "react": "^16.8.4",
 "react-dom": "^16.8.4",
 "react-materialize": "^2.6.0",
 "react-scripts": "^2.1.8"
+}
+```
+Server side
+```js
+{
+"axios": "^0.18.0",
+"express": "^4.16.3",
+"if-env": "^1.0.4",
+"mongoose": "^5.3.16"
 }
 ```
 
@@ -38,9 +48,15 @@ React-based Google Books Search app.React components, work with helper/util func
 
 ### Screenshots
 ---
-* #### Deployed App View
+#### Deployed App View
 
-![App](./readmeImage/booksearch.png)
+*   Search Page
+
+    ![App](./readmeImage/search.png)
+
+*   Saved Page
+
+    ![App](./readmeImage/saved.png)
 
 
 
