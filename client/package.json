@@ -9,13 +9,13 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.1"
   },
+  "proxy": "http://localhost:6000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3001/",
   "eslintConfig": {
     "extends": "react-app"
   },

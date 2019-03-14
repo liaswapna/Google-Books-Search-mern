@@ -10,6 +10,7 @@ const db = require("../models");
 module.exports = {
   findAll: (req, res) => {
     const { params } = req.body;
+    console.log(req.params)
     axios
       .get("https://www.googleapis.com/books/v1/volumes", {
         params
