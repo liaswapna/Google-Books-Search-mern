@@ -34,7 +34,7 @@ React-based Google Books Search app.React components, work with helper/util func
 ### Demos
 ---
 * Search Book
-* [Heroku Link]()
+* [Heroku Link]( https://google-books-search-mern.herokuapp.com/)
 
 ### Screenshots
 ---
