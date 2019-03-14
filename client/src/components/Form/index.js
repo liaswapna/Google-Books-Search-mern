@@ -12,7 +12,7 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
           id="Title"
           type="text"
           value={q}
-          placeholder="Ready Player One"
+          placeholder="Enter Search term here"
           name="q"
           onChange={handleInputChange}
           required
@@ -22,7 +22,7 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
         <button
           onClick={handleFormSubmit}
           type="submit"
-          className="btn btn-lg btn-danger float-right"
+          className="btn btn-lg btn-warning float-right"
         >
           Search
         </button>
