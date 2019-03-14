@@ -52,9 +52,16 @@ Server side
 
 *   Search Page
 
+    ![App](./readmeImage/searchapp.png)
+
+
     ![App](./readmeImage/search.png)
 
+
 *   Saved Page
+
+    ![App](./readmeImage/savedapp.png)
+
 
     ![App](./readmeImage/saved.png)
 
