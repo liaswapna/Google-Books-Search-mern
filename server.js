@@ -1,8 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-
-// Require routes
+const routes = require('./routes')
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -17,6 +16,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Add routes, both API and view
+app.use(routes);
+
 // Connect to Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks", {
   useCreateIndex: true,
