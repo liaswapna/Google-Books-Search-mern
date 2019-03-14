@@ -9,7 +9,7 @@ const db = require("../models");
 
 module.exports = {
   findAll: (req, res) => {
-    const { query: params } = req;
+    const { params } = req.body;
     axios
       .get("https://www.googleapis.com/books/v1/volumes", {
         params
@@ -25,12 +25,25 @@ module.exports = {
             result.volumeInfo.imageLinks.thumbnail
         )
       )
-      .then(apiBooks =>
-        db.Book.find().then(dbBooks =>
-          dbBooks.filter(dbBook => dbBook.googleId.toString() !== apiBooks.id)
-        )
-      )
-      .then(books => res.json(books))
+      .then(apiBooks => {
+        // console.log(apiBooks.length);
+        db.Book.find().then(dbBooks => {
+          if (dbBooks.length !==0) {
+            let s = dbBooks.map(dbBook =>
+              apiBooks.filter(
+                apiBook => dbBook.googleId.toString() !== apiBook.id
+              )
+            );
+            return s;
+            // dbBooks.filter(dbBook => dbBook.googleId.toString() !== apiBooks.id)
+          }
+          // console.log(apiBooks.length)
+        });
+        return apiBooks;
+      })
+      .then(books => {
+        res.json(books);
+      })
       .catch(err => res.status(422).json(err));
   }
 };
