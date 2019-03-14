@@ -42,6 +42,7 @@ module.exports = {
         return apiBooks;
       })
       .then(books => {
+        console.log(books.length)
         res.json(books);
       })
       .catch(err => res.status(422).json(err));
